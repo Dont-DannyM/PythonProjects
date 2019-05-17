@@ -1,0 +1,9 @@
+{
+	"name": "Calculator-Bot"
+	"version": "1.0.0"
+	"description":"Python based calc bot, with text to speech."
+	"main": "bot.js"
+	"author": "Danny Matar"
+	"dependencies": {ffmpeg,node.js}
+}
+
