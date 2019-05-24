@@ -1,0 +1,16 @@
+import math
+
+def add(a1,a2):
+	return a1 + a2
+
+def mul(a1,a2):
+	return a1*a2
+
+def sub(a1,a2):
+	return a1-a2
+
+def div(a1,a2):
+	if(a1 and a2 != 0):
+		return a1/a2
+	else:
+		return "Please do no have any zeros in division"

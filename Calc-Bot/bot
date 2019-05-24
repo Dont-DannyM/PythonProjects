@@ -43,38 +43,14 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 
         args = args.splice(1);
         switch(cmd) {
-            // !kick
-            case 'kick':
-                bot.sendMessage({
-                    to: channelID,
-                    message: 'Omae Wa Mou Shindeiru'
+            // !add
+            case 'add':
+               bot.getMessage({
+                    channelID,
+                    userID
                 });
-
-                 //Then get the audio context
-
-                 bot.getAudioContext(botChannelID, function(error, stream) {
-
-                if (error) return console.error(error);
-
-                //Create a stream to your file and pipe it to the stream
-
-                //Without {end: false}, it would close up the stream, so make sure to include that.
-
-                fs.createReadStream('voiceOriginal.mp4').pipe(stream, {end: false});
-
-                //The stream fires `done` when it's got nothing else to send to Discord.
-
-                stream.on('done', function() {
-                //Handle
-                bot.moveUserTo({serverID: serverID, userID: userID, channelID: hellID}, [console.log("I Can't Move You There!")]);
-                bot.leaveVoiceChannel(botChannelID);
-                }); 
-                 });
+            console.log(message);
             
-            
-            break;
-            case 'kenshiro':
-            bot.joinVoiceChannel(botChannelID, ["You must be in this Channel to use !kick"]);
             break;
             case 'help':
                 bot.sendMessage({
