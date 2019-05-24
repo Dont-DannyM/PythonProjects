@@ -44,12 +44,15 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         args = args.splice(1);
         switch(cmd) {
             // !kick
-            case 'kick':
-                bot.sendMessage({
-                    to: channelID,
-                    message: 'Omae Wa Mou Shindeiru'
+            case 'add';
+                bot.getMessage({
+                    channelID,
+                    UserID
                 });
+            console.log(message);
 
+            break;
+            
                  //Then get the audio context
 
                  bot.getAudioContext(botChannelID, function(error, stream) {
